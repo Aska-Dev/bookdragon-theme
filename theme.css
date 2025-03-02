@@ -2,15 +2,20 @@
 |_ COLOR VARIABLES
 |_ FONTS
 |_ UI ELEMENTS
+|_ PUBLISH CONFIG
 |_ FONT FACES
 */
 
 /* ### COLOR VARIABLES*/
 
 :root {
+    /*Room for global resources for snippets*/
+}
+
+.theme-light {
     --primary-colour-h: 42;
     --primary-colour-s: 100%;
-    --primary-colour-l: 98%;
+    --primary-colour-l: 95%;
     --primary-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--primary-colour-l));
 
     --secondary-colour-l: calc(var(--primary-colour-l) - 3%);
@@ -39,6 +44,7 @@ body {
     --accent-h: 100;
     --accent-s: 30%;
     --accent-l: 35%;
+    --accent-color-hsl: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 
     /* # Interactive colors */
     --interactive-normal: var(--primary-alt-colour);
@@ -66,6 +72,22 @@ body {
 
     /* # Window colors*/
     --titlebar-background-focused: var(--titlebar-background);
+
+    /* # Web link colors*/
+    --link-external-color: #5d63d6;
+    --link-external-color-hover: #4b4e8a;
+
+    /* # List colors*/
+    --list-marker-color: var(--accent-color-hsl);
+
+    /*# Table colors*/
+    --table-row-alt-background: var(--secondary-colour);
+
+    --table-row-background-hover: var(--primary-alt-colour);
+    --table-row-alt-background-hover: var(--table-row-background-hover);
+
+    --table-header-background: hsl(var(--accent-h), calc(var(--accent-s)), calc(var(--accent-l) + 30%));
+    --table-header-background-hover: hsl(var(--accent-h), calc(var(--accent-s)), calc(var(--accent-l) + 15%));
 }
 
 /* ### FONTS */
@@ -78,8 +100,30 @@ body {
 /* ### UI ELEMENTS */
 
 body {
+    /* # popover elements*/
     --popover-width: 50vw;
     --popover-height: 40vh;
+
+    /* # blockquote elements*/
+    --blockquote-border-thickness: 3px;
+
+    /* # list ui elements*/
+    --list-indent: 30px;
+
+    /* # Table ui elements*/
+    --table-column-last-border-width: 3px;
+    --table-row-last-border-width: 3px;
+
+    /* # Tag edge smoothnes*/
+    --tag-radius: 10px
+}
+
+/* ### PUBLISH CONFIG */
+
+/*Remove Publish-Container-Styling from app.css*/
+.published-container .markdown-rendered h1, .published-container .markdown-rendered h2, .published-container .markdown-rendered h3, .published-container .markdown-rendered h4 {
+    border-bottom: none;
+    margin: 10px !important;
 }
 
 /* ### FONT FACES */
