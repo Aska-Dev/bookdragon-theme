@@ -2,14 +2,27 @@
 |_ COLOR VARIABLES
 |_ FONTS
 |_ UI ELEMENTS
+|_ SNIPPET LIBRARY
 |_ PUBLISH CONFIG
 |_ FONT FACES
 */
 
 /* ### COLOR VARIABLES*/
 
-:root {
-    /*Room for global resources for snippets*/
+.theme-dark {
+    --primary-colour-h: 42;
+    --primary-colour-s: 100%;
+    --primary-colour-l: 95%;
+    --primary-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--primary-colour-l));
+
+    --secondary-colour-l: calc(var(--primary-colour-l) - 3%);
+    --secondary-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--secondary-colour-l));
+
+    --primary-alt-colour-l: calc(var(--primary-colour-l) - 8%);
+    --primary-alt-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--primary-alt-colour-l));
+
+    --text-colour: rgb(53, 49, 63);
+    --text-colour-inverted: rgb(247, 247, 247);
 }
 
 .theme-light {
@@ -27,7 +40,7 @@
     --text-colour: hsl(47, 38%, 77%);
 
     --text-colour: rgb(53, 49, 63);
-    --text-colour-inverted: rgb(247, 247, 247);
+    --text-colour-inverted: #F6F0E2;
 }
 
 body {
@@ -116,6 +129,30 @@ body {
 
     /* # Tag edge smoothnes*/
     --tag-radius: 10px
+}
+
+/* ### SNIPPET LIBRARY */
+
+body {
+    /* # shadow*/
+    --outline: #0000008c;
+    --box-shadow: 5px 5px 5px var(--outline);
+
+    /*# extended color palette */
+    --bookdragon-red-h: 0;
+    --bookdragon-red-s: 70%;
+    --bookdragon-red-l: 60%;
+    --bookdragon-red: hsl(var(--bookdragon-red-h), var(--bookdragon-red-s), var(--bookdragon-red-l));
+
+    --bookdragon-blue-h: 235;
+    --bookdragon-blue-s: 50%;
+    --bookdragon-blue-l: 55%;
+    --bookdragon-blue: hsl(var(--bookdragon-blue-h), var(--bookdragon-blue-s), var(--bookdragon-blue-l));
+
+    --bookdragon-green-h: 120;
+    --bookdragon-green-s: 40%;
+    --bookdragon-green-l: 45%;
+    --bookdragon-green: hsl(var(--bookdragon-green-h), var(--bookdragon-green-s), var(--bookdragon-green-l));
 }
 
 /* ### PUBLISH CONFIG */
