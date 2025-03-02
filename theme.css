@@ -1,8 +1,68 @@
-body {
-    /*Change font to Bookerly*/
-    --font-text-theme: Bookerly;
+/*
+|_ COLOR VARIABLES
+|_ FONTS
+|_ UI ELEMENTS
+|_ FONT FACES
+*/
+
+/* +++ COLOR VARIABLES*/
+
+:root {
+    --primary-colour-h: 42;
+    --primary-colour-s: 100%;
+    --primary-colour-l: 100%;
+    --primary-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--primary-colour-l));
+
+    --secondary-colour-l: calc(var(--primary-colour-l) - 3%);
+    --secondary-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--secondary-colour-l));
+
+    --primary-alt-colour-l: calc(var(--primary-colour-l) - 8%);
+    --primary-alt-colour: hsl(var(--primary-colour-h), var(--primary-colour-s), var(--primary-alt-colour-l));
+
+    --text-colour: hsl(47, 38%, 77%);
+
+    --text-colour: rgb(53, 49, 63);
+    --text-colour-inverted: rgb(247, 247, 247);
 }
 
+body {
+    /* +++ Surface Colors */
+    --background-primary: var(--primary-colour);
+    --background-secondary: var(--secondary-colour);
+
+    --background-primary-alt: var(--primary-alt-colour);
+
+    --background-modifier-hover: hsl(var(--primary-colour-h), calc(var(--primary-colour-s) - 30%), calc(var(--primary-colour-l) - 12%));
+    --background-modifier-border: hsl(var(--primary-colour-h), calc(var(--primary-colour-s) - 70%), calc(var(--primary-colour-l) - 10%));
+
+    /* +++ Accent Colors */
+    --accent-h: 100;
+    --accent-s: 30%;
+    --accent-l: 35%;
+
+    /* +++ Interactive colors */
+    --interactive-normal: var(--primary-alt-colour);
+    --interactive-hover: var(--secondary-colour);
+    --interactive-accent-hover: hsl(var(--accent-h), calc(var(--accent-s) - 10%), calc(var(--accent-l) - 8%));
+
+    /* +++ Text colors */
+    --text-normal: var(--text-colour);
+    --text-faint: var(--text-colour);
+    --text-on-accent: var(--text-colour-inverted);
+
+    /* +++ Text background colors*/
+    --text-selection: hsl(var(--accent-h), calc(var(--accent-s) + 10%), calc(var(--accent-l) + 50%));
+    --text-highlight-bg: hsl(var(--accent-h), calc(var(--accent-s)), calc(var(--accent-l) + 30%));
+}
+
+/* +++ FONTS */
+
+body {
+    --font-text-theme: Bookerly;
+    --font-interface-theme: Bookerly;
+}
+
+/* +++ UI ELEMENTS */
 
 /*Resources*/
 @font-face {
