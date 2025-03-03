@@ -2,6 +2,7 @@
 ### SUMMARY
 
 |_ COLUMNS
+|_ CONTAINER
 */
 
 /* ### COLUMNS */
@@ -39,3 +40,16 @@
   .callout[data-callout~=columns][data-callout-metadata~="6"] {
     --columns: 6;
   }
+
+  /* ### CONTAINER */
+
+.callout[data-callout~=container] > .callout-title
+{
+    display: none;
+}
+.callout[data-callout~=container]
+{
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
