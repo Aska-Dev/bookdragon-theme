@@ -4,6 +4,7 @@
 
 |_ Block Headers
 |_ Centered Headers
+|_ Underlined Headers
 
 */
 
@@ -61,3 +62,14 @@
     position: relative;
 }
 
+/* ### UNDERLINED HEADER */
+
+.line,.ln {
+    --underline-color: var(--text-colour);
+    border-bottom: 2px solid var(--underline-color); /* Unterstrich */
+    padding-bottom: 5px; /* Abstand zwischen Text und Linie */
+}
+
+/*.line.gold {
+    --underline-color: hsl(var(--primary-colour-h), calc(var(--primary-colour-s) - 40%), calc(var(--primary-colour-l) - 40%));
+}*/
